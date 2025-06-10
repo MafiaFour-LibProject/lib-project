@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 0.4rem 1.2rem;
+}
+
+nav input {
+  padding: 0.3rem 2rem;
+  font-size: 14px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+#hero img {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 600%;
+  padding: 3rem;
+  /* background-color: rgba(144, 238, 144, 0.185); */
+}
+
+.hero-overlay p {
+  font-size: 150%;
+  margin-bottom: 3rem;
+}
+
+.hero-overlay button {
+  padding: 0.7rem 3rem;
+  border-radius: 35px;
+  background-color: green;
+}
+
+.hero-overlay button:hover {
+  border: 2px solid white;
+  background-color: green;
+  color: white;
+}
+
+.home-page {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  gap: 80px;
+}
+
+.home-left-section {
+  padding: 3rem;
+  max-width: 500px;
+  box-shadow: 0 0 20px 8px rgba(182, 202, 255, 0.6);
+}
+
+.home-left-section h2 {
+  font-size: 250%;
+  margin-bottom: 20px;
+}
+
+.home-right-section {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  /* display: block; */
+}
+
+.home-right-section video {
+  width: 400px;
+  height: 500px;
+}
+
+.book-display-title {
+  font-size: 300%;
+  text-align: center;
+  margin-top: 20px;
+}

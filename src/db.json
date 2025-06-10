@@ -1,0 +1,44 @@
+{
+  "Books": [
+    {
+      "id": 1,
+      "title": "The Lost Chronicles",
+      "author": "Avery Thompson",
+      "published_year": 2012,
+      "genre": "Fantasy",
+      "available_copies": 4
+    },
+    {
+      "id": 2,
+      "title": "Quantum Hearts",
+      "author": "Leila Mason",
+      "published_year": 2018,
+      "genre": "Science Fiction",
+      "available_copies": 2
+    },
+    {
+      "id": 3,
+      "title": "Shadows of the Past",
+      "author": "Derek Hughes",
+      "published_year": 2005,
+      "genre": "Mystery",
+      "available_copies": 6
+    },
+    {
+      "id": 4,
+      "title": "Culinary Dreams",
+      "author": "Maria Lopez",
+      "published_year": 2020,
+      "genre": "Cookbook",
+      "available_copies": 10
+    },
+    {
+      "id": 5,
+      "title": "Gardening with Grace",
+      "author": "Grace Walters",
+      "published_year": 2016,
+      "genre": "Non-fiction",
+      "available_copies": 3
+    }
+  ]
+}
