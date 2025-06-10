@@ -1,4 +1,5 @@
 import PagesLayout from "../layouts/PagesLayout";
+const displayContainer = document.getElementById("bookDisplay");
 
 const Home = () => {
   return (
@@ -28,7 +29,9 @@ const Home = () => {
         </div>
       </div>
       <h1 className="book-display-title">Browse Our Books</h1>
-      <div id="bookDisplay">Books go here</div>
+      <div id="bookDisplay">
+        <div className="product-card"></div>
+      </div>
     </PagesLayout>
   );
 };
