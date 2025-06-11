@@ -1,23 +1,58 @@
 import logo from "../assets/mf-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 w-full h-20 bg-white z-[999] pointer-events-none mb-8">
-      <nav className="flex gap-5 flex-row justify-around items-center fixed top-5 left-1/2 transform -translate-x-1/2 p-8px rounded-xl shadow-lg w-[1000px]  z-[1000]">
+    <nav>
+      <div>
         <img className="logo" src={logo} alt="Logo" />
-        <input
-          type="text"
-          placeholder="Search book"
-          className="border border-[rgb(216,211,211)] px-12px py-2 bg-white text-black"
-        />
+      </div>
+
+      <div className="socials-container">
         <div className="flex items-center justify-center gap-5">
-          <button className="bg-green-600 text-white text-sm pt-8 pb-8 ">
-            Add New Book
-          </button>
-          <span>Contact</span>
+          <button className="add-book">Add Book</button>
         </div>
-      </nav>
-    </header>
+
+        <div className=" socials-icons flex space-x-4">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "instagram"]}
+              className="instagram hover:text-pink-500"
+            />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "twitter"]}
+              className="twitter hover:text-blue-400"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "facebook"]}
+              className="facebook hover:text-blue-600"
+            />
+          </a>
+          <a href="#contact">
+            <FontAwesomeIcon
+              icon="phone"
+              className=" phone hover:text-green-500"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };
 

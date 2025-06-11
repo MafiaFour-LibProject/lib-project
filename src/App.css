@@ -7,15 +7,29 @@
   font-family: "Quicksand";
 }
 
-nav {
-  background-color: black;
-  color: white;
-  padding: 0.4rem 1.2rem;
+body {
+  overflow-x: hidden;
+  background-color: #f8f8f8;
 }
 
-nav input {
-  padding: 0.3rem 2rem;
-  font-size: 14px;
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  /* top: 0;
+  left: 0; */
+  /* margin-bottom: 50px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+  background-color: #333333;
+  color: black;
+  padding: 0.4rem 4rem;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
@@ -23,9 +37,89 @@ nav input {
   width: 50px;
 }
 
-#hero img {
+.socials-container {
+  display: flex;
+  column-gap: 30px;
+}
+
+.add-book {
+  padding: 6px 20px;
+  background-color: rgb(8, 92, 248);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.add-book:hover {
+  background-color: #2563eb;
+  border: 1px solid white;
+  color: white;
+}
+.socials-icons {
+  display: flex;
+  column-gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials-icons .instagram {
+  color: rgb(243, 12, 50);
+}
+
+.socials-icons .twitter {
+  color: blue;
+}
+
+.socials-icons .phone {
+  color: green;
+}
+
+#landing img {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+.landing-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+}
+
+.landing-overlay h1 {
+  font-size: 600%;
+  padding: 3rem;
+
+  /* background-color: rgba(144, 238, 144, 0.185); */
+}
+
+.landing-overlay p {
+  font-size: 150%;
+  margin-bottom: 3rem;
+}
+
+.landing-overlay button {
+  padding: 0.7rem 3rem;
+  border-radius: 35px;
+  background-color: green;
+}
+
+.landing-overlay button:hover {
+  border: 2px solid white;
+  background-color: green;
+  color: white;
+}
+
+.hero-section {
   position: relative;
 }
 
@@ -40,78 +134,82 @@ nav input {
   left: 0;
   right: 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
 }
 
 .hero-overlay h1 {
-  font-size: 600%;
-  padding: 3rem;
-  /* background-color: rgba(144, 238, 144, 0.185); */
+  font-size: 400%;
+  font-weight: 600;
+  font-family: "Merienda";
 }
 
 .hero-overlay p {
-  font-size: 150%;
-  margin-bottom: 3rem;
-}
-
-.hero-overlay button {
-  padding: 0.7rem 3rem;
-  border-radius: 35px;
-  background-color: green;
-}
-
-.hero-overlay button:hover {
-  border: 2px solid white;
-  background-color: green;
-  color: white;
+  font-size: 22px;
 }
 
 .home-page {
-  margin-top: 7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 3rem;
   height: 100vh;
   gap: 80px;
+  box-shadow: 0 0 px rgba(0, 0, 0, 0.3);
+  margin: 0.5rem 4rem;
 }
 
 .home-left-section {
   padding: 3rem;
   max-width: 500px;
-  box-shadow: 0 0 20px 8px rgba(182, 202, 255, 0.6);
 }
 
 .home-left-section h2 {
   font-size: 250%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  font-family: "Merienda";
 }
 
 .home-right-section {
+  display: flex;
   width: 100%;
   max-width: 480px;
   height: auto;
-  /* display: block; */
+  column-gap: 0.8rem;
 }
 
-.home-right-section video {
-  width: 400px;
-  height: 500px;
+.home-right-section img {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.book-display-title {
-  font-size: 300%;
-  text-align: center;
-  margin-top: 20px;
+.home-image-1,
+.home-image-2 {
+  display: block;
 }
 
-#productsdisplay {
+.home-image-2 {
+  margin-top: 30px;
+}
+
+.book-display-title-container {
+  font-family: "Merienda";
+  margin-bottom: 3rem;
+}
+
+.book-display-title-container .title-shape {
   width: 100%;
+  transform: scaleX(1.3);
+  transform-origin: center;
+}
+
+#bookDisplay {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin: 0 5rem;
 }
 
 .product-card {
@@ -119,17 +217,23 @@ nav input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 30px 0;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background: white;
   transition: transform 0.2s ease-in-out;
+  row-gap: 1rem;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  border: 2px solid goldenrod;
 }
 
 .product-card button {
   padding: 0.5rem 1.2rem;
   border-style: none;
-  background-color: red;
+  background-color: green;
   color: white;
   transition: background-color 0.15s ease;
 }
@@ -143,21 +247,49 @@ nav input {
   transform: scale(1.05);
 }
 
-.product-card img {
+.product-card div img {
   width: 100%;
   height: 180px;
   object-fit: contain;
   border-bottom: 2px solid #ddd;
 }
 
-.product-card h2 {
-  margin: 10px 0;
-  font-size: 18px;
-  font-weight: bold;
+.book-title {
+  font-size: 150%;
+  font-weight: 600;
 }
 
-.product-card p {
-  line-height: 1.5rem;
-  font-size: 14px;
-  color: #555;
+.book-author {
+  font-size: 120%;
+}
+
+/* Styles for Book Details */
+
+#bookDetails {
+  padding: 2rem;
+}
+
+.book-details-card {
+  align-items: center;
+  padding: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-details-card div img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-bottom: 2px solid #ddd;
+}
+
+.book-title {
+  font-size: 150%;
+  font-weight: 600;
+}
+
+.book-author {
+  font-size: 120%;
 }
