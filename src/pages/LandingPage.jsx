@@ -1,12 +1,12 @@
-import heroImage from "../assets/hero-image.jpg";
+import landingImage from "../assets/landing-image.jpg";
 
 const LandingPage = () => {
   return (
-    <div id="hero">
+    <div id="landing">
       <div>
-        <img src={heroImage} alt="" />
+        <img src={landingImage} alt="" />
       </div>
-      <div class="hero-overlay">
+      <div class="landing-overlay">
         <h1>MF Library</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         <button type="submit">Sign In</button>
