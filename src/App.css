@@ -9,7 +9,8 @@
 
 body {
   overflow-x: hidden;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  background-color: #f4f4f417;
 }
 
 html {
@@ -18,18 +19,19 @@ html {
 
 nav {
   position: fixed;
-  /* top: 0;
-  left: 0; */
-  /* margin-bottom: 50px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 3rem;
-  background-color: #333333;
   color: black;
-  padding: 0.4rem 4rem;
+  padding: 0.4rem 8rem;
   width: 100%;
   z-index: 1000;
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: #333333ab;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -42,20 +44,6 @@ nav {
   column-gap: 30px;
 }
 
-.add-book {
-  padding: 6px 20px;
-  background-color: rgb(8, 92, 248);
-  color: white;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.15s ease;
-}
-
-.add-book:hover {
-  background-color: #2563eb;
-  border: 1px solid white;
-  color: white;
-}
 .socials-icons {
   display: flex;
   column-gap: 1.5rem;
@@ -85,38 +73,43 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
   color: white;
+  padding: 0 4rem;
 }
 
 .landing-overlay h1 {
-  font-size: 600%;
-  padding: 3rem;
-
-  /* background-color: rgba(144, 238, 144, 0.185); */
+  font-size: 300%;
+  font-family: "Merienda";
 }
 
 .landing-overlay p {
-  font-size: 150%;
+  font-size: 18px;
   margin-bottom: 3rem;
+  color: black;
+}
+
+.landing-overlay span {
+  color: orangered;
+  font-weight: 600;
+  font-size: 35px;
 }
 
 .landing-overlay button {
-  padding: 0.7rem 3rem;
-  border-radius: 35px;
-  background-color: green;
+  padding: 0.5rem 1.2rem;
+  background-color: rgb(0, 89, 255);
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .landing-overlay button:hover {
-  border: 2px solid white;
-  background-color: green;
-  color: white;
+  background-color: rgb(1, 74, 209);
 }
 
 .hero-section {
@@ -133,41 +126,57 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
 }
 
 .hero-overlay h1 {
   font-size: 400%;
-  font-weight: 600;
+  font-weight: 700;
   font-family: "Merienda";
+  padding: 0 1rem;
+  color: black;
+  font-weight: 900;
 }
 
-.hero-overlay p {
-  font-size: 22px;
+.hero-overlay span {
+  background-color: rgb(0, 153, 255);
+  font-weight: bold;
+  margin-top: 2rem;
+  color: white;
+  border-radius: 2px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.hero-overlay span:hover {
+  background-color: rgb(7, 124, 202);
 }
 
 .home-page {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem;
-  height: 100vh;
+  padding: 2rem;
   gap: 80px;
   box-shadow: 0 0 px rgba(0, 0, 0, 0.3);
-  margin: 0.5rem 4rem;
+  margin: 5rem;
 }
 
 .home-left-section {
-  padding: 3rem;
-  max-width: 500px;
+  max-width: 400px;
+  background-color: rgba(210, 232, 250, 0.267);
+  padding: 2rem;
 }
 
 .home-left-section h2 {
   font-size: 250%;
-  margin-bottom: 2rem;
+  margin-bottom: 0.4rem;
   font-family: "Merienda";
+  text-align: center;
+}
+
+.home-left-section p {
+  margin: 15px 0;
 }
 
 .home-right-section {
@@ -195,8 +204,12 @@ nav {
 }
 
 .book-display-title-container {
-  font-family: "Merienda";
   margin-bottom: 3rem;
+}
+
+.book-display-title-container h1 {
+  margin-bottom: 1rem;
+  font-family: "Merienda";
 }
 
 .book-display-title-container .title-shape {
@@ -205,19 +218,55 @@ nav {
   transform-origin: center;
 }
 
-#bookDisplay {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  margin: 0 5rem;
+.add-book-button {
+  background-color: rgb(0, 153, 255);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
-.product-card {
+.add-book-button:hover {
+  background-color: rgb(7, 124, 202);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-container div input {
+  padding: 8px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.089);
+}
+
+.search-container .search-button {
+  background-color: rgb(0, 153, 255);
+  color: white;
+  padding: 9px 30px;
+  margin-left: -1px;
+  border: 1px solid rgba(128, 128, 128, 0.116);
+}
+
+.search-container .search-button:hover {
+  background-color: rgb(7, 124, 202);
+}
+
+#bookDisplay {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  gap: 5rem;
+  margin: 5rem;
+}
+
+.book-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background: white;
@@ -225,33 +274,32 @@ nav {
   row-gap: 1rem;
 }
 
-.product-card:hover {
+.book-card:hover {
   transform: scale(1.05);
   border: 2px solid goldenrod;
 }
 
-.product-card button {
+.book-card button {
   padding: 0.5rem 1.2rem;
   border-style: none;
-  background-color: green;
+  font-weight: bold;
+  background-color: rgb(0, 153, 255);
   color: white;
   transition: background-color 0.15s ease;
-}
-
-.product-card button:hover {
-  background-color: rgb(145, 6, 6);
   border-radius: 3px;
+  cursor: pointer;
 }
 
-.product-card:hover {
+.book-card button:hover {
+  background-color: rgb(7, 124, 202);
+}
+
+.book-card:hover {
   transform: scale(1.05);
 }
 
-.product-card div img {
-  width: 100%;
-  height: 180px;
+.book-card div img {
   object-fit: contain;
-  border-bottom: 2px solid #ddd;
 }
 
 .book-title {
@@ -261,6 +309,12 @@ nav {
 
 .book-author {
   font-size: 120%;
+}
+
+.add-delete-buttons {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 20px;
 }
 
 /* Styles for Book Details */
@@ -270,8 +324,11 @@ nav {
 }
 
 .book-details-card {
+  margin: 4rem 0;
+  display: flex;
   align-items: center;
-  padding: 30px 0;
+  justify-content: space-around;
+  padding: 8rem;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background: white;
@@ -280,16 +337,27 @@ nav {
 
 .book-details-card div img {
   width: 100%;
-  height: 180px;
+  height: 500px;
   object-fit: contain;
   border-bottom: 2px solid #ddd;
 }
 
 .book-title {
-  font-size: 150%;
+  font-size: 250%;
   font-weight: 600;
 }
 
 .book-author {
-  font-size: 120%;
+  font-size: 220%;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-details-card .right-section p {
+  font-size: 25px;
+  font-weight: 400;
 }
