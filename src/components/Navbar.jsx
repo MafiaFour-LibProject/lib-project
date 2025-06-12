@@ -1,7 +1,26 @@
+import { Link } from "react-router";
 import logo from "../assets/mf-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faPlus } from "@fortawesome/free-solid-svg-icons";
+
+import { useEffect } from "react";
 
 const Navbar = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector("nav");
+
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav>
       <div>
@@ -9,9 +28,12 @@ const Navbar = () => {
       </div>
 
       <div className="socials-container">
-        <div className="flex items-center justify-center gap-5">
-          <button className="add-book">Add Book</button>
-        </div>
+        <Link to="/add-book">
+          <div>
+            <FontAwesomeIcon icon={faBook} title="Add book" />
+            <FontAwesomeIcon icon={faPlus} title="Add book" />
+          </div>
+        </Link>
 
         <div className=" socials-icons flex space-x-4">
           <a
@@ -22,6 +44,7 @@ const Navbar = () => {
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
               className="instagram hover:text-pink-500"
+              title="Instagram"
             />
           </a>
           <a
@@ -32,6 +55,7 @@ const Navbar = () => {
             <FontAwesomeIcon
               icon={["fab", "twitter"]}
               className="twitter hover:text-blue-400"
+              title="Twitter"
             />
           </a>
           <a
@@ -42,12 +66,14 @@ const Navbar = () => {
             <FontAwesomeIcon
               icon={["fab", "facebook"]}
               className="facebook hover:text-blue-600"
+              title="Facebook"
             />
           </a>
           <a href="#contact">
             <FontAwesomeIcon
               icon="phone"
               className=" phone hover:text-green-500"
+              title="Contact"
             />
           </a>
         </div>
