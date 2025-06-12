@@ -5,17 +5,50 @@
   padding: 0;
 }
 
-.form-container {
-  max-width: 800px;
-  width: 100%;
+.section {
+  width: 90%;
   height: 80%;
+  /* margin: 10px; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* height: 100%; */
+  display: flex;
+  flex-direction: row;
+  /* column-gap: 5px; */
+  margin-left: 50px;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+}
+
+.section-image {
+  flex: 1; /* Makes the image area take up equal space */
+  padding: 50px;
+  text-align: center;
+}
+
+.section-image img {
+  max-width: 106%; /* Makes sure the image doesn't go outside its box */
+  border-radius: 8px;
+  padding-top: 73px;
+  cursor: pointer;
+}
+
+.form-container {
+  flex: 1; /* Makes the form area take up equal space */
+
   background-color: #ffffff;
-  padding: 30px;
-  margin-top: 5px;
+  padding: 20px;
   border-radius: 12px 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  margin-left: 270px;
+  margin-left: 50px;
   text-align: center;
+  padding-top: 20px;
+  margin-top: 70px;
 }
 
 h1 {
@@ -111,6 +144,8 @@ footer {
   color: #fff;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  margin-top: 100px;
+  /* min-height:  50%; */
 }
 
 .footer-content {
