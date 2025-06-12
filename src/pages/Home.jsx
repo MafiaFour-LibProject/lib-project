@@ -1,13 +1,12 @@
 import PagesLayout from "../layouts/PagesLayout";
-import placeholderImage from "../assets/placeholder-image.jpg";
 import homeImage1 from "../assets/home-image-1.jpg";
+import heroImage from "../assets/hero.jpg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router";
 import Editform from "./Editform";
-
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -57,7 +56,8 @@ const Home = () => {
     <PagesLayout>
       <section className="hero-section">
         <div className="hero">
-          <video
+          <img src={heroImage} alt="" />
+          {/* <video
             className="w-full h-screen object-cover"
             autoPlay
             muted
@@ -65,19 +65,19 @@ const Home = () => {
             playsInline
           >
             <source src="/videos/hero-video.mp4" type="video/mp4" />
-          </video>
+          </video> */}
         </div>
         <div className="hero-overlay">
           <h1>Discover Books That Inspire</h1>
           <span>
-            <a href="#books-section">Browse Books</a>
+            <a href="#books-section">Browse Collection</a>
           </span>
         </div>
       </section>
 
       <div className="home-page">
         <div className="home-left-section">
-          <h2>About Us</h2>
+          <h2>Every Story Starts Here</h2>
           <div className=" mt-2 text-[tomato]">
             <svg
               viewBox="0 0 200 20"
@@ -93,12 +93,11 @@ const Home = () => {
             </svg>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            aliquid id ipsam veritatis esse labore, et illum adipisci iusto
-            laboriosam. <br></br> <br></br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            aliquid id ipsam veritatis esse labore, et illum adipisci iusto
-            laboriosam. <br></br>
+            Whether you're here to discover a new favorite book or just unwind
+            with a good read, we've got something for every kind of reader.
+            <br></br> <br></br>
+            From page-turning adventures to thoughtful nonfiction, MF Library is
+            a space where stories come to life. <br></br>
           </p>
         </div>
         <div className="home-right-section">
@@ -113,7 +112,7 @@ const Home = () => {
 
       <div className="book-display-title-container flex flex-col items-center justify-center text-center my-10">
         <h1 id="books-section" className="text-3xl font-bold text-gray-800">
-          Find Your Favorite Book...
+          Find Your Favorite Book
         </h1>
         <div className="w-[130%] mt-2 text-[tomato]">
           <svg
@@ -132,9 +131,9 @@ const Home = () => {
       </div>
 
       <div className="search-container">
-        <button className="add-book-button" onClick={handleNavigateToAdd}>
+        {/* <button className="add-book-button" onClick={handleNavigateToAdd}>
           Add Book
-        </button>
+        </button> */}
         <div>
           <input
             className="w-[300px] px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -150,29 +149,30 @@ const Home = () => {
         {loading ? (
           <p className="w-full flex justify-center">Loading...</p>
         ) : (
-          <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-6 relative">
+          <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-20 relative">
             {books.map((book) => {
               return (
                 <div className="book-card">
-                  <img
-                    className="h-2/5"
-                    src={book.imageUrl}
-                    alt="Book Display"
-                  />
+                  <img src={book.imageUrl} alt="Book Display" />
+
                   <h2>{book.title}</h2>
-                  <p className="book-author">{book.author}</p>
-                  <p className="published-year">{book.publishedYear}</p>
-                  <p className="book-genre">{book.genre}</p>
+                  <p>{book.author}</p>
+                  {/* <p className="published-year">{book.publishedYear}</p>
+                  <p className="book-genre">{book.genre}</p> */}
                   <div className="add-delete-buttons">
                     <button
                       onClick={() => navigate(`/book-details/${book.id}`)}
-                      className="book-card-button"
+                      className="view-button"
                     >
-                      View details...
+                      View
                     </button>
+
                     <button onClick={() =>navigate(`/edit/${book.id}`)}>Edit</button>
-                    <button onClick={() => handleDelete(book.id)}>
-                      Remove Book
+                    <button
+                      className="delete-book-button"
+                      onClick={() => handleDelete(book.id)}
+                    >
+                      Remove
                     </button>
                   </div>
                 </div>
