@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router";
+import Editform from "./Editform";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -48,7 +49,7 @@ const Home = () => {
   const navigateToAdd = useNavigate();
 
   const handleNavigateToAdd = () => {
-    navigateToAdd("/book-details");
+    navigateToAdd("/add-book");
   };
 
   return (
@@ -166,6 +167,7 @@ const Home = () => {
                       View
                     </button>
 
+                    <button onClick={() =>navigate(`/edit/${book.id}`)}>Edit</button>
                     <button
                       className="delete-book-button"
                       onClick={() => handleDelete(book.id)}

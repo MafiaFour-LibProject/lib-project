@@ -8,6 +8,9 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import BookForm from "./pages/BookForm";
 import Footer from "./components/Footer";
+// import Editform from "./pages/Editform";
+import Editform from "./pages/Editform";
+
 library.add(fab, faPhone);
 
 function App() {
@@ -30,6 +33,11 @@ function App() {
     {
       path: "/add-book",
       element: <BookForm />,
+    },
+
+    {
+      path: "/edit/:id",
+      element: <Editform />,
     },
   ]);
   return <RouterProvider router={router} />;
