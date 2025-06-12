@@ -38,6 +38,7 @@ nav {
 }
 
 .socials-container {
+  
   display: flex;
   column-gap: 30px;
 }

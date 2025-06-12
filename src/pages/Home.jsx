@@ -2,6 +2,7 @@ import PagesLayout from "../layouts/PagesLayout";
 import placeholderImage from "../assets/placeholder-image.jpg";
 import homeImage1 from "../assets/home-image-1.jpg";
 
+
 const Home = () => {
   return (
     <PagesLayout>
