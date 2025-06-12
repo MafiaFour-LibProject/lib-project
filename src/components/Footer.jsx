@@ -5,19 +5,19 @@ const Footer = () => {
   return (
      <div>
 <footer id="contact">
-        <div class="footer-content">
-          <div class="footer-column">
+        <div className="footer-content">
+          <div className="footer-column">
             <h1 className="text-red-100">Address</h1>
             <p>200, BTL Street,Accra</p>
           </div>
 
-          <div class="footer-column">
+          <div className="footer-column">
             <h1>Reach Out</h1>
             <p>+233 550 661 765</p>
             <p>info@mf-lib.com</p>
           </div>
 
-          <div class="footer-column">
+          <div className="footer-column">
             <h1>Navigation</h1>
             <ul>
               <li>
@@ -38,10 +38,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="footer-column">
+          <div className="footer-column">
             <h1>Newsletter</h1>
             <p>Stay updated with our latest Library!</p>
-            <form action="#" method="post" class="newsletter-form">
+            <form action="#" method="post" className="newsletter-form">
               <input
                 type="email"
                 placeholder="Your email"
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="footer-bottom">
+        <div className="footer-bottom">
           <p>&copy; 2025 MF Library. All rights reserved.</p>
         </div>
       </footer>
