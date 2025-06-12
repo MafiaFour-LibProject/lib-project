@@ -42,14 +42,27 @@ const BookDetails = () => {
         <div id="bookDetails">
           <div className="book-details-card">
             <div className="left-section">
-              <img src={book.imageUrl} alt="" />
+              <img src={book.imageUrl} alt="Book Image" />
             </div>
             <div className="right-section">
-              <h2 className="book-title">{book.title}</h2>
-              <p>{book.author}</p>
-              <p>{book.publishedYear}</p>
-              <p>{book.genre}</p>
-              <p>{book.availableCopies}</p>
+              <h2 className="book-details-title">
+                <strong>Title: </strong>
+                {book.title}
+              </h2>
+              <p className="book-details-author">
+                <strong>Author:</strong> {book.author}
+              </p>
+              <p className="book-details-year">
+                <strong>Year published: </strong>
+                {book.publishedYear}
+              </p>
+              <p className="book-details-genre">
+                <strong>Genre:</strong> {book.genre}
+              </p>
+              <p className="book-details-copies">
+                <strong>Available Copies: </strong>
+                {book.availableCopies}
+              </p>
             </div>
           </div>
         </div>
