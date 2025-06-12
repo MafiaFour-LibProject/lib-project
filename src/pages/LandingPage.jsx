@@ -1,4 +1,4 @@
-import landingImage from "../assets/landing-image.jpg";
+import landingImage from "../assets/formImage1.jpg";
 
 import { useNavigate } from "react-router";
 
@@ -15,9 +15,11 @@ const LandingPage = () => {
       </div>
       <div class="landing-overlay">
         <h1>Welcome to MF Library</h1>
-        <p>
-          Discover. <span>Dream</span>. Dive In
-        </p>
+        <h2 className="reveal-text">
+          <span className="word delay-1">Dream.</span>
+          <span className="word delay-2">Drift.</span>
+          <span className="word delay-3">Devour.</span>
+        </h2>
 
         <button onClick={handleGetStarted}>Get Started</button>
       </div>

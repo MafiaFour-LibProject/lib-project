@@ -29,7 +29,7 @@ const Navbar = () => {
 
       <div className="socials-container">
         <Link to="/add-book">
-          <div>
+          <div className="add-book-icon">
             <FontAwesomeIcon icon={faBook} title="Add book" />
             <FontAwesomeIcon icon={faPlus} title="Add book" />
           </div>
