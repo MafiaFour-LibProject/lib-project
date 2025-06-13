@@ -40,12 +40,16 @@ const BookDetails = () => {
         <p>Loading...</p>
       ) : (
         <div id="bookDetails">
-          <div className="book-details-card">
+          <div className="book-details-card flex justify-around items-center my-16 p-24 bg-white rounded-lg shadow border border-[rgba(218,165,32,0.281)]">
             <div className="left-section">
-              <img src={book.imageUrl} alt="Book Image" />
+              <img
+                className="w-[250px] h-auto"
+                src={book.imageUrl}
+                alt="Book Image"
+              />
             </div>
-            <div className="right-section">
-              <h2 className="book-details-title">
+            <div className="right-section flex flex-col justify-center gap-5">
+              <h2 className="book-details-title text-[250%]">
                 <strong>Title: </strong>
                 {book.title}
               </h2>
