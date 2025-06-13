@@ -3,8 +3,16 @@ import PagesLayout from "../layouts/PagesLayout";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+import { useNavigate } from "react-router";
 
 const BookDetails = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/home");
+  };
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState({});
 
@@ -40,6 +48,27 @@ const BookDetails = () => {
         <p>Loading...</p>
       ) : (
         <div id="bookDetails">
+          <button
+            onClick={handleGetStarted}
+            className="back-button  bg-blue-600"
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
+          <h2 className="book-details-header">Book Details</h2>
+          <div className=" mt-2 text-[tomato]">
+            <svg
+              viewBox="0 0 200 20"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-5"
+            >
+              <path
+                d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            </svg>
+          </div>
           <div className="book-details-card flex justify-around items-center my-16 p-24 bg-white rounded-lg shadow border border-[rgba(218,165,32,0.281)]">
             <div className="left-section">
               <img

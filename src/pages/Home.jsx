@@ -143,7 +143,7 @@ const Home = () => {
         {/* <button className="add-book-button" onClick={handleNavigateToAdd}>
           Add Book
         </button> */}
-        <div>
+        {/* <div>
           <input
             className="w-[300px] px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-yellow-200"
             placeholder="Search..."
@@ -151,7 +151,7 @@ const Home = () => {
           <button className="search-button text-white px-3 py-1 ml-[-1px] border border-gray-300 hover:bg-blue-700">
             <FontAwesomeIcon icon={faSearch} />
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div id="bookDisplay">

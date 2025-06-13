@@ -150,12 +150,30 @@ nav.scrolled {
   padding: 2rem;
 }
 
+.book-details-header {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .book-details-card {
-  margin: 4rem 0;
+  margin: 3rem 0;
   padding: 6rem;
 }
 
 .book-details-card .right-section p {
   font-size: 20px;
   font-weight: 400;
+}
+
+.back-button {
+  padding: 0.2rem 0.6rem;
+  margin-top: 50px;
+  color: white;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: rgb(18, 18, 226);
 }
