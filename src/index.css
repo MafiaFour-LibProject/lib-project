@@ -11,44 +11,44 @@
   /* margin: 10px; */
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border: 2px;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* height: 100%; */
   display: flex;
   flex-direction: row;
   /* column-gap: 5px; */
   margin-left: 50px;
-  /* padding-top: 50px; */
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .section-image {
-  flex: 1; /* Makes the image area take up equal space */
-  padding: 50px;
+  flex: 1;
+  padding: 70px;
   text-align: center;
 }
 
 .section-image img {
-  max-width: 106%; /* Makes sure the image doesn't go outside its box */
+  max-width: 106%;
   border-radius: 8px;
-  padding-top: 73px;
+  /* padding-top: 90px; */
   cursor: pointer;
+  padding: 5px;
+  margin-top: 70px;
 }
 
 .form-container {
-  flex: 1; /* Makes the form area take up equal space */
-
+  flex: 1;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 50px;
   border-radius: 12px 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   margin-left: 50px;
   text-align: center;
-  padding-top: 20px;
-  margin-top: 70px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  margin-top: 90px;
 }
 
 h1 {
@@ -56,17 +56,7 @@ h1 {
   font-weight: 800;
   color: #333;
   margin-bottom: 30px;
-}
-
-/* Styling for the success message box */
-.message-box {
-  background-color: #d1fae5;
-  border: 1px solid #34d399;
-  color: #065f46;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: left;
+  padding-bottom: 20px;
 }
 
 /* Styling for each group of label and input */
@@ -75,7 +65,6 @@ h1 {
   text-align: left;
   padding-left: 70px;
 }
-
 label {
   display: block;
   font-size: 0.875rem;
@@ -84,8 +73,8 @@ label {
   margin-bottom: 8px;
 }
 
-/* Styling for all input boxes and the text area */
 input[type="text"],
+.Url-input,
 input[type="number"],
 textarea {
   width: 90%;
@@ -100,17 +89,20 @@ textarea {
 }
 
 /* What happens when you click on an input box */
-/* input[type="text"]:focus,
+input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus {
   outline: none;
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-} */
+}
 
 textarea {
   min-height: 100px;
   resize: vertical;
+}
+#bottom {
+  padding-bottom: 50px;
 }
 
 button[type="submit"] {
@@ -123,20 +115,21 @@ button[type="submit"] {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  /* transition: background-color 0.3s ease, transform 0.3s ease;  */
+  /* padding-bottom: 10px;  */
   box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
 }
 
 button[type="submit"]:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
+  /* padding-top: 80px; */
 }
 
 /* What happens when you click the button */
-/* button[type="submit"]:active {
+button[type="submit"]:active {
   transform: translateY(0);
-  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3); */
-/* } */
+  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
+}
 
 footer {
   background-color: #333;

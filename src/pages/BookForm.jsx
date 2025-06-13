@@ -20,6 +20,9 @@ const BookForm = () => {
       author: FormData.author.value,
       publishedYear: FormData.publishedYear.value,
       genre: FormData.genre.value,
+      imageUrl:FormData.imageUrl.value,
+      
+
       // summary: FormData.author.value,
     };
     try {
@@ -37,8 +40,9 @@ const BookForm = () => {
     <PagesLayout>
       <div className="section">
         <div className="form-container">
-          {/* <h1>Add Your Book</h1> */}
-          <h1>Add Your Book</h1>
+          
+        
+        <h1>Add Your Book</h1> 
 
           <form className="bookForm" onSubmit={handleSubmit}>
             <div className="form-group">
@@ -48,6 +52,17 @@ const BookForm = () => {
                 id="bookTitle"
                 name="title"
                 placeholder="bookTitle"
+                required
+              />
+            </div>
+
+             <div className="form-group">
+              <label htmlFor="imageUrl">URL:</label>
+              <input
+                type="text"
+                id="1"
+                name="imageUrl"
+                placeholder="imageUrl"
                 required
               />
             </div>

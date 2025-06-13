@@ -50,8 +50,10 @@ const Editform = () => {
     const payload = {
       title: FormData.title ?? book?.title,
       author: FormData.author ?? book?.author,
-      publishedYear: FormData.publishedYear?? book?.publishedYear,
+      publishedYear: FormData.publishedYear ?? book?.publishedYear,
       genre: FormData.genre ?? book?.genre,
+      imageUrl: FormData.imageUrl ?? book?.imageUrl,
+
       // summary: FormData.author.value,
     };
     try {
@@ -91,6 +93,24 @@ const Editform = () => {
                       return { ...prev, title: e.target.value };
                     })
                   }
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="imageUrl">URL:</label>
+                <input className="Url-input"
+                  type="url"
+                  id="1"
+                  name="imageUrl"
+                  placeholder="imageUrl"
+                  onChange={(e) =>
+                    setFormData((prev) => {
+                      return { ...prev, imageUrl: e.target.value };
+                    })
+                  }
+                  value={FormData?.imageUrl ?? book?.imageUrl}
+                  // placeholder="1"
                   required
                 />
               </div>
